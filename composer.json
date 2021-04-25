@@ -1,10 +1,16 @@
 {
     "name": "hexlet/code",
+    "bin": [
+        "bin/brain-games"
+    ],
+    "type": "library",
     "authors": [
         {
             "name": "Maksimus",
             "email": "tankov.m83@gmail.com"
         }
     ],
+    "description": "php-project-lvl1",
+    "license": "Apache-2.0",
     "require": {}
 }
