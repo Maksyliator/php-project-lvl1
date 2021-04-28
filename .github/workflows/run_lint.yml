@@ -30,4 +30,4 @@ jobs:
       run: composer install --prefer-dist --no-progress
     
     - name: Run lint
-      run: male lint
+      run: make lint
