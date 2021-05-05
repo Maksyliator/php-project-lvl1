@@ -18,7 +18,8 @@
         "files" : [
             "src/Cli.php",
             "src/Games/Paritycheck.php",
-            "src/Games/Сalculator.php"
+            "src/Games/Сalculator.php",
+            "src/Engine.php"
         ]
     },
     "require": {
