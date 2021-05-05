@@ -2,7 +2,8 @@
     "name": "hexlet/code",
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "type": "library",
     "authors": [
@@ -16,7 +17,8 @@
     "autoload": {
         "files" : [
             "src/Cli.php",
-            "src/Paritycheck.php"
+            "src/Games/Paritycheck.php",
+            "src/Games/Сalculator.php"
         ]
     },
     "require": {
