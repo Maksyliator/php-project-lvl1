@@ -4,3 +4,4 @@
 [![RUN LINT](https://github.com/Maksyliator/php-project-lvl1/actions/workflows/run_lint.yml/badge.svg)](https://github.com/Maksyliator/php-project-lvl1/actions/workflows/run_lint.yml)
 [![asciicast](https://asciinema.org/a/sHu04jbIjlvIaX8GWziX17wb4.svg)](https://asciinema.org/a/sHu04jbIjlvIaX8GWziX17wb4)
 [![asciicast](https://asciinema.org/a/PcwWxF8AMcFSJkT8zQJbugXBC.svg)](https://asciinema.org/a/PcwWxF8AMcFSJkT8zQJbugXBC)
+[![asciicast](https://asciinema.org/a/DSeIDRguyu0EX60SLKDcwwSr8.svg)](https://asciinema.org/a/DSeIDRguyu0EX60SLKDcwwSr8)
