@@ -6,6 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Even\Paritycheck\parityCheck;
 use function Brain\Calc\Calculator\calculator;
+use function Brain\Gcd\Gcd\nod;
 
 function gameLogic()
 {
@@ -15,7 +16,8 @@ function gameLogic()
     line("Select the game number.");
     line("1. Parity check");
     line("2. Calculator");
-    $gameNumber = prompt('Enter its number.');
+    line("3. GCD");
+    $gameNumber = prompt('Enter its number');
     for ($i = 1; $i <= 3; $i++) {
         if ($gameNumber === '1') {
             if ($i === 1) {
@@ -28,6 +30,12 @@ function gameLogic()
                 line('What is the result of the expression?');
             }
             $result = calculator();
+        }
+        if ($gameNumber === '3') {
+            if ($i === 1) {
+                line('Find the greatest common divisor of given numbers.');
+            }
+            $result = nod();
         }
         line($result, "\n");
         if ($result !== 'Correct!') {
