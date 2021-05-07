@@ -3,4 +3,4 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-Brain\Progression\Progression\progression();
+Brain\Games\Engine\gameLogic('progression');
