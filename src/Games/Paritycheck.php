@@ -12,5 +12,6 @@ function parityCheck()
     $answer = prompt('Your answer');
     $parityCheck = $rndNumber % 2;
     $parityCheck === 0 ? $correctAnswer = 'yes' : $correctAnswer = 'no';
-    return $answer === $correctAnswer ? 'Correct!' : "'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.";
+    return $answer === $correctAnswer ? 'Correct!' :
+        "'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.";
 }
