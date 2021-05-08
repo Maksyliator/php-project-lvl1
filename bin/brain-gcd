@@ -3,4 +3,4 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-Brain\Games\Engine\gameLogic('gcd');
+Php\Project\Lvl1\Engine\useGameLogic('gcd');

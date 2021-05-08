@@ -1,11 +1,11 @@
 <?php
 
-namespace Brain\Even\Paritycheck;
+namespace Php\Project\Lvl1\Games\Paritycheck;
 
 use function cli\line;
 use function cli\prompt;
 
-function parityCheck()
+function playParityCheck():string
 {
     $rndNumber = rand(1, 100);
     line('Question: %s', $rndNumber);

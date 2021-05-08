@@ -3,4 +3,4 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-Brain\Games\Engine\gameLogic('primeNumber');
+Php\Project\Lvl1\Engine\useGameLogic('primeNumber');

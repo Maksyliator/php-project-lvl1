@@ -1,14 +1,16 @@
 <?php
 
-namespace Brain\Calc\Calculator;
+namespace Php\Project\Lvl1\Games\Calculator;
 
 use function cli\line;
 use function cli\prompt;
 
-function calculator()
+function playCalculator():string
 {
     $number1 = rand(1, 20);
     $number2 = rand(1, 20);
+    $question = '';
+    $result = 0;
     $determinantOfArithmeticExpression = rand(1, 3);
     switch ($determinantOfArithmeticExpression) {
         case 1:

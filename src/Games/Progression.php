@@ -1,11 +1,11 @@
 <?php
 
-namespace Brain\Progression\Progression;
+namespace Php\Project\Lvl1\Games\Progression;
 
 use function cli\line;
 use function cli\prompt;
 
-function progression()
+function playProgression():string
 {
     $progressionStep = rand(1, 10);
     $firstNumberOfProgression = rand(1, 100);

@@ -1,14 +1,15 @@
 <?php
 
-namespace Brain\Gcd\Gcd;
+namespace Php\Project\Lvl1\Games\Gcd;
 
 use function cli\line;
 use function cli\prompt;
 
-function nod()
+function playNod():string
 {
     $number1 = rand(1, 100);
     $number2 = rand(1, 100);
+    $nod = 0;
     $question = "{$number1} {$number2}";
     line('Question: %s', $question);
     $answer = prompt('Your answer');

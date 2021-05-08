@@ -1,17 +1,18 @@
 <?php
 
-namespace Brain\Games\Engine;
+namespace Php\Project\Lvl1\Engine;
 
 use function cli\line;
 use function cli\prompt;
-use function Brain\Even\Paritycheck\parityCheck;
-use function Brain\Calc\Calculator\calculator;
-use function Brain\Gcd\Gcd\nod;
-use function Brain\Progression\Progression\progression;
-use function Brain\Prime\Prime\primeNumber;
+use function Php\Project\Lvl1\Games\Calculator\playCalculator;
+use function Php\Project\Lvl1\Games\Gcd\playNod;
+use function Php\Project\Lvl1\Games\Paritycheck\playParityCheck;
+use function Php\Project\Lvl1\Games\Progression\playProgression;
+use function Php\Project\Lvl1\Games\Prime\playPrimeNumber;
 
-function gameLogic(string $gameNumber)
+function useGameLogic(string $gameNumber):void
 {
+    $result = '';
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
@@ -20,36 +21,37 @@ function gameLogic(string $gameNumber)
             if ($i === 1) {
                 line('Answer "yes" if the number is even, otherwise answer "no".');
             }
-            $result = parityCheck();
+            $result = playParityCheck();
         }
         if ($gameNumber === 'calc') {
             if ($i === 1) {
                 line('What is the result of the expression?');
             }
-            $result = calculator();
+            $result = playCalculator();
         }
         if ($gameNumber === 'gcd') {
             if ($i === 1) {
                 line('Find the greatest common divisor of given numbers.');
             }
-            $result = nod();
+            $result = playNod();
         }
         if ($gameNumber === 'progression') {
             if ($i === 1) {
                 line('What number is missing in the progression?');
             }
-            $result = progression();
+            $result = playProgression();
         }
         if ($gameNumber === 'primeNumber') {
             if ($i === 1) {
                 line('Answer "yes" if given number is prime. Otherwise answer "no".');
             }
-            $result = primeNumber();
+            $result = playPrimeNumber();
         }
         line($result, "\n");
         if ($result !== 'Correct!') {
-            return line("Let's try again, %s!", $name);
+            line("Let's try again, %s!", $name);
+            return;
         }
     }
-    return line("Congratulations, %s!", $name);
+    line("Congratulations, %s!", $name);
 }

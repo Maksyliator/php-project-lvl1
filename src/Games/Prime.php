@@ -1,21 +1,21 @@
 <?php
 
-namespace Brain\Prime\Prime;
+namespace Php\Project\Lvl1\Games\Prime;
 
 use function cli\line;
 use function cli\prompt;
 
-function primeNumber()
+function playPrimeNumber():string
 {
     $rndNumber = rand(1, 100);
-    $correctAnswer = is_prime($rndNumber);
+    $correctAnswer = primeСheck($rndNumber);
     line('Question: %s', $rndNumber);
     $answer = prompt('Your answer');
     return $answer === $correctAnswer ? 'Correct!' :
         "'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.";
 }
 
-function is_prime($number)
+function primeСheck($number):string
 {
     for ($i = 2; $i <= sqrt($number); $i++) {
         if ($number % $i === 0) {
