@@ -8,6 +8,7 @@ use function Brain\Even\Paritycheck\parityCheck;
 use function Brain\Calc\Calculator\calculator;
 use function Brain\Gcd\Gcd\nod;
 use function Brain\Progression\Progression\progression;
+use function Brain\Prime\Prime\primeNumber;
 
 function gameLogic(string $gameNumber)
 {
@@ -38,6 +39,12 @@ function gameLogic(string $gameNumber)
                 line('What number is missing in the progression?');
             }
             $result = progression();
+        }
+        if ($gameNumber === 'primeNumber') {
+            if ($i === 1) {
+                line('Answer "yes" if given number is prime. Otherwise answer "no".');
+            }
+            $result = primeNumber();
         }
         line($result, "\n");
         if ($result !== 'Correct!') {
