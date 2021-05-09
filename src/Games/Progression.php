@@ -9,7 +9,7 @@ function playProgression(): string
 {
     $progressionStep = rand(1, 10);
     $firstNumberOfProgression = rand(1, 100);
-    $itemNumberForQuestion = rand(0, 9);
+    $itemNumberForQuestion = rand(1, 9);
     $progression[0] = $firstNumberOfProgression;
     $question = $progression[0];
     for ($i = 1; $i <= 9; $i++) {
