@@ -15,7 +15,7 @@ function playPrimeNumber(): string
         "'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.";
 }
 
-function primeСheck($number): string
+function primeСheck(int $number): string
 {
     for ($i = 2; $i <= sqrt($number); $i++) {
         if ($number % $i === 0) {

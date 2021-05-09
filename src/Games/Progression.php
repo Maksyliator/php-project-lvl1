@@ -7,6 +7,7 @@ use function cli\prompt;
 
 function playProgression(): string
 {
+    $progression = [];
     $progressionStep = rand(1, 10);
     $firstNumberOfProgression = rand(1, 100);
     $itemNumberForQuestion = rand(1, 9);
