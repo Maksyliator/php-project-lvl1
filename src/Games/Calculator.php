@@ -5,7 +5,7 @@ namespace Php\Project\Lvl1\Games\Calculator;
 use function cli\line;
 use function cli\prompt;
 
-function playCalculator():string
+function playCalculator(): string
 {
     $number1 = rand(1, 20);
     $number2 = rand(1, 20);

@@ -10,7 +10,7 @@ use function Php\Project\Lvl1\Games\Paritycheck\playParityCheck;
 use function Php\Project\Lvl1\Games\Progression\playProgression;
 use function Php\Project\Lvl1\Games\Prime\playPrimeNumber;
 
-function useGameLogic(string $gameNumber):void
+function useGameLogic(string $gameNumber): void
 {
     $result = '';
     line('Welcome to the Brain Game!');

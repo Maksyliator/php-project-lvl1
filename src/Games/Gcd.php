@@ -5,7 +5,7 @@ namespace Php\Project\Lvl1\Games\Gcd;
 use function cli\line;
 use function cli\prompt;
 
-function playNod():string
+function playNod(): string
 {
     $number1 = rand(1, 100);
     $number2 = rand(1, 100);

@@ -5,7 +5,7 @@ namespace Php\Project\Lvl1\Games\Paritycheck;
 use function cli\line;
 use function cli\prompt;
 
-function playParityCheck():string
+function playParityCheck(): string
 {
     $rndNumber = rand(1, 100);
     line('Question: %s', $rndNumber);
