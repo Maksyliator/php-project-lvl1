@@ -3,4 +3,4 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-Php\Project\Lvl1\Engine\useGameLogic('calc');
+Brain\Games\Engine\useGameLogic('calc');
