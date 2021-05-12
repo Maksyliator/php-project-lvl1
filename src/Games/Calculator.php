@@ -1,6 +1,6 @@
 <?php
 
-namespace Php\Project\Lvl1\Games\Calculator;
+namespace Brain\Games\Games\Calculator;
 
 use function cli\line;
 use function cli\prompt;

@@ -1,14 +1,14 @@
 <?php
 
-namespace Php\Project\Lvl1\Engine;
+namespace Brain\Games\Engine;
 
 use function cli\line;
 use function cli\prompt;
-use function Php\Project\Lvl1\Games\Calculator\playCalculator;
-use function Php\Project\Lvl1\Games\Gcd\playNod;
-use function Php\Project\Lvl1\Games\Paritycheck\playParityCheck;
-use function Php\Project\Lvl1\Games\Progression\playProgression;
-use function Php\Project\Lvl1\Games\Prime\playPrimeNumber;
+use function Brain\Games\Games\Calculator\playCalculator;
+use function Brain\Games\Games\Gcd\playNod;
+use function Brain\Games\Games\Paritycheck\playParityCheck;
+use function Brain\Games\Games\Progression\playProgression;
+use function Brain\Games\Games\Prime\playPrimeNumber;
 
 function useGameLogic(string $gameNumber): void
 {

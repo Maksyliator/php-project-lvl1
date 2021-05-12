@@ -1,6 +1,6 @@
 <?php
 
-namespace Php\Project\Lvl1\Games\Paritycheck;
+namespace Brain\Games\Games\Paritycheck;
 
 use function cli\line;
 use function cli\prompt;
