@@ -25,4 +25,5 @@ function nod(int $number1, int $number2): int
             return $i;
         }
     }
+    return $i;
 }
