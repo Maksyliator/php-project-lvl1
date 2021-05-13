@@ -24,6 +24,7 @@ function nod(int $number1, int $number2): int
     for ($i = $number1; $i > 0; $i--) {
         if ($number1 % $i == 0 && $number2 % $i == 0) {
             $nod = $i;
+            break;
         }
     }
     return $nod;
