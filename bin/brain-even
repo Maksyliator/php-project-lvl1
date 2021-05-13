@@ -3,4 +3,5 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-Brain\Games\Engine\useGameLogic('even');
+Brain\Games\Games\Paritycheck\playParityCheck();
+

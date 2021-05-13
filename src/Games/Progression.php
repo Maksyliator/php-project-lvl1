@@ -2,23 +2,38 @@
 
 namespace Brain\Games\Games\Progression;
 
-use function cli\line;
-use function cli\prompt;
+use function Brain\Games\Engine\useGameLogic;
 
-function playProgression(): string
+function playProgression(): void
 {
-    $progression = [];
+    $result = [];
+    $listOfQuestions = [];
+    $rulesOfTheGame = 'What number is missing in the progression?';
+    for ($i = 0; $i <= 2; $i++) {
+        list($question, $result[$i]) = prepareAQuestionAndResult(calculateTheProgression());
+        $listOfQuestions[$i] = $question;
+    }
+    useGameLogic($rulesOfTheGame, $listOfQuestions, $result);
+}
+
+function calculateTheProgression(): array
+{
     $progressionStep = rand(1, 10);
     $firstNumberOfProgression = rand(1, 100);
-    $itemNumberForQuestion = rand(1, 9);
     $progression[0] = $firstNumberOfProgression;
-    $question = $progression[0];
     for ($i = 1; $i <= 9; $i++) {
         $progression[$i] = $progression[$i - 1] + $progressionStep;
-        $itemNumberForQuestion !== $i ? $question .= " {$progression[$i]}" : $question .= ' ..';
     }
-    line('Question: %s', $question);
-    $answer = prompt('Your answer');
-    return (int)$answer === $progression[$itemNumberForQuestion] ? 'Correct!' :
-        "'{$answer}' is wrong answer ;(. Correct answer was '{$progression[$itemNumberForQuestion]}'.";
+    return $progression;
+}
+
+function prepareAQuestionAndResult(array $progression): array
+{
+    $question = '';
+    $itemNumberForQuestion = rand(0, 9);
+    $result = $progression[$itemNumberForQuestion];
+    for ($i = 0; $i <= 9; $i++) {
+        $itemNumberForQuestion !== $i ? $question .= "{$progression[$i]} " : $question .= '.. ';
+    }
+    return array ($question, $result);
 }

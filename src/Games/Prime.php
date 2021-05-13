@@ -2,20 +2,21 @@
 
 namespace Brain\Games\Games\Prime;
 
-use function cli\line;
-use function cli\prompt;
+use function Brain\Games\Engine\useGameLogic;
 
-function playPrimeNumber(): string
+function playPrimeNumber(): void
 {
-    $rndNumber = rand(1, 100);
-    $correctAnswer = primeСheck($rndNumber);
-    line('Question: %s', $rndNumber);
-    $answer = prompt('Your answer');
-    return $answer === $correctAnswer ? 'Correct!' :
-        "'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.";
+    $question = [];
+    $result = [];
+    $rulesOfTheGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    for ($i = 0; $i <= 2; $i++) {
+        $question[$i] = rand(1, 100);
+        $result[$i] = checkIfPrimeNumber($question[$i]);
+    }
+    useGameLogic($rulesOfTheGame, $question, $result);
 }
 
-function primeСheck(int $number): string
+function checkIfPrimeNumber(int $number): string
 {
     for ($i = 2; $i <= sqrt($number); $i++) {
         if ($number % $i === 0) {

@@ -2,31 +2,42 @@
 
 namespace Brain\Games\Games\Calculator;
 
-use function cli\line;
-use function cli\prompt;
+use function Brain\Games\Engine\useGameLogic;
 
-function playCalculator(): string
+function playCalculator(): void
 {
-    $number1 = rand(1, 20);
-    $number2 = rand(1, 20);
+    $question = [];
+    $result = [];
+    $rulesOfTheGame = "What is the result of the expression?";
+    for ($i = 0; $i <= 2; $i++) {
+        list($question[$i], $result[$i]) = getARandomMathExpression();
+    }
+    useGameLogic($rulesOfTheGame, $question, $result);
+}
+
+function getARandomMathExpression(): array
+{
     $question = '';
     $result = 0;
+    $number1 = rand(1, 20);
+    $number2 = rand(1, 20);
+    $sum = 1;
+    $difference = 2;
+    $multiplication = 3;
     $determinantOfArithmeticExpression = rand(1, 3);
     switch ($determinantOfArithmeticExpression) {
-        case 1:
-            $result = $number1 + $number2;
+        case $sum:
             $question = "{$number1} + {$number2}";
+            $result = $number1 + $number2;
             break;
-        case 2:
-            $result = $number1 - $number2;
+        case $difference:
             $question = "{$number1} - {$number2}";
+            $result = $number1 - $number2;
             break;
-        case 3:
-            $result = $number1 * $number2;
+        case $multiplication:
             $question = "{$number1} * {$number2}";
+            $result = $number1 * $number2;
             break;
     }
-    line('Question: %s', $question);
-    $answer = prompt('Your answer');
-    return $result === (int)$answer ? 'Correct!' : "'{$answer}' is wrong answer ;(. Correct answer was '{$result}'.";
+    return array ($question, $result);
 }

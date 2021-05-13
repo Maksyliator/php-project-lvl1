@@ -2,16 +2,17 @@
 
 namespace Brain\Games\Games\Paritycheck;
 
-use function cli\line;
-use function cli\prompt;
+use function Brain\Games\Engine\useGameLogic;
 
-function playParityCheck(): string
+function playParityCheck(): void
 {
-    $rndNumber = rand(1, 100);
-    line('Question: %s', $rndNumber);
-    $answer = prompt('Your answer');
-    $parityCheck = $rndNumber % 2;
-    $parityCheck === 0 ? $correctAnswer = 'yes' : $correctAnswer = 'no';
-    return $answer === $correctAnswer ? 'Correct!' :
-        "'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.";
+    $question = [];
+    $result = [];
+    $rulesOfTheGame = 'Answer "yes" if the number is even, otherwise answer "no".';
+    for ($i = 0; $i <= 2; $i++) {
+        $question[$i] = rand(1, 100);
+        $parityCheck[$i] = $question[$i] % 2;
+        $parityCheck[$i] === 0 ? $result[$i] = 'yes' : $result[$i] = 'no';
+    }
+    useGameLogic($rulesOfTheGame, $question, $result);
 }
