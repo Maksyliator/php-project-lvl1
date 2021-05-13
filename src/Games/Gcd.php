@@ -20,10 +20,11 @@ function playNod(): void
 
 function nod(int $number1, int $number2): int
 {
+    $nod = 0;
     for ($i = $number1; $i > 0; $i--) {
         if ($number1 % $i == 0 && $number2 % $i == 0) {
-            return $i;
+            $nod = $i;
         }
     }
-    return $i;
+    return $nod;
 }
