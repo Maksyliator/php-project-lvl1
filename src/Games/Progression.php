@@ -18,6 +18,7 @@ function playProgression(): void
 
 function calculateTheProgression(): array
 {
+    $progression = [];
     $progressionStep = rand(1, 10);
     $firstNumberOfProgression = rand(1, 100);
     $progression[0] = $firstNumberOfProgression;

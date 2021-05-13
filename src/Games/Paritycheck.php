@@ -7,6 +7,7 @@ use function Brain\Games\Engine\useGameLogic;
 function playParityCheck(): void
 {
     $question = [];
+    $parityCheck = [];
     $result = [];
     $rulesOfTheGame = 'Answer "yes" if the number is even, otherwise answer "no".';
     for ($i = 0; $i <= 2; $i++) {
