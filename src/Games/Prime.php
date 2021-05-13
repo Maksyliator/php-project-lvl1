@@ -10,7 +10,7 @@ function playPrimeNumber(): void
     $result = [];
     $rulesOfTheGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     for ($i = 0; $i <= 2; $i++) {
-        $question[$i] = rand(1, 100);
+        $question[$i] = rand(2, 100);
         $result[$i] = checkIfPrimeNumber($question[$i]);
     }
     useGameLogic($rulesOfTheGame, $question, $result);
