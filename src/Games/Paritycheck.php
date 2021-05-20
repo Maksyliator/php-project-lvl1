@@ -3,7 +3,8 @@
 namespace Brain\Games\Games\Paritycheck;
 
 use function Brain\Games\Engine\useGameLogic;
-const  RULE_OF_GAME = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const RULE_OF_GAME = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function playParityCheck(): void
 {

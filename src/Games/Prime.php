@@ -3,7 +3,8 @@
 namespace Brain\Games\Games\Prime;
 
 use function Brain\Games\Engine\useGameLogic;
-const  RULE_OF_GAME = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const RULE_OF_GAME = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function playPrimeNumber(): void
 {

@@ -3,7 +3,8 @@
 namespace Brain\Games\Games\Progression;
 
 use function Brain\Games\Engine\useGameLogic;
-const  RULE_OF_GAME = 'What number is missing in the progression?';
+
+const RULE_OF_GAME = 'What number is missing in the progression?';
 
 function playProgression(): void
 {

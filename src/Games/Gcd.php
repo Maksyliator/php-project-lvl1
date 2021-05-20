@@ -3,7 +3,8 @@
 namespace Brain\Games\Games\Gcd;
 
 use function Brain\Games\Engine\useGameLogic;
-const  RULE_OF_GAME = 'Find the greatest common divisor of given numbers.';
+
+const RULE_OF_GAME = 'Find the greatest common divisor of given numbers.';
 
 function playNod(): void
 {

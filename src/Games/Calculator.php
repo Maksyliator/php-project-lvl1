@@ -3,7 +3,8 @@
 namespace Brain\Games\Games\Calculator;
 
 use function Brain\Games\Engine\useGameLogic;
-const  RULE_OF_GAME = 'What is the result of the expression?';
+
+const RULE_OF_GAME = 'What is the result of the expression?';
 
 function playCalculator(): void
 {
