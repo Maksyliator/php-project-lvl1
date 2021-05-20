@@ -3,6 +3,7 @@
 namespace Brain\Games\Games\Prime;
 
 use function Brain\Games\Engine\useGameLogic;
+
 use const Brain\Games\Engine\NUMBER_OF_ROUND;
 
 const RULE_OF_GAME = 'Answer "yes" if given number is prime. Otherwise answer "no".';

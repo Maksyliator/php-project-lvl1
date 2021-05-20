@@ -3,6 +3,7 @@
 namespace Brain\Games\Games\Calculator;
 
 use function Brain\Games\Engine\useGameLogic;
+
 use const Brain\Games\Engine\NUMBER_OF_ROUND;
 
 const RULE_OF_GAME = 'What is the result of the expression?';

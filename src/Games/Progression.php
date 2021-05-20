@@ -3,6 +3,7 @@
 namespace Brain\Games\Games\Progression;
 
 use function Brain\Games\Engine\useGameLogic;
+
 use const Brain\Games\Engine\NUMBER_OF_ROUND;
 
 const RULE_OF_GAME = 'What number is missing in the progression?';
