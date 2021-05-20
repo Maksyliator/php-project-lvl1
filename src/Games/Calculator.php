@@ -3,16 +3,16 @@
 namespace Brain\Games\Games\Calculator;
 
 use function Brain\Games\Engine\useGameLogic;
+const  RULE_OF_GAME = 'What is the result of the expression?';
 
 function playCalculator(): void
 {
     $question = [];
     $result = [];
-    $rulesOfTheGame = "What is the result of the expression?";
     for ($i = 0; $i <= 2; $i++) {
         list($question[$i], $result[$i]) = getARandomMathExpression();
     }
-    useGameLogic($rulesOfTheGame, $question, $result);
+    useGameLogic(RULE_OF_GAME, $question, $result);
 }
 
 function getARandomMathExpression(): array

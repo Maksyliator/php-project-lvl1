@@ -3,19 +3,19 @@
 namespace Brain\Games\Games\Gcd;
 
 use function Brain\Games\Engine\useGameLogic;
+const  RULE_OF_GAME = 'Find the greatest common divisor of given numbers.';
 
 function playNod(): void
 {
     $question = [];
     $result = [];
-    $rulesOfTheGame = 'Find the greatest common divisor of given numbers.';
     for ($i = 0; $i <= 2; $i++) {
         $number1 = rand(1, 100);
         $number2 = rand(1, 100);
         $question[$i] = "{$number1} {$number2}";
         $result[$i] = nod($number1, $number2);
     }
-    useGameLogic($rulesOfTheGame, $question, $result);
+    useGameLogic(RULE_OF_GAME, $question, $result);
 }
 
 function nod(int $number1, int $number2): int

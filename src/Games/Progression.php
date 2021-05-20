@@ -3,17 +3,17 @@
 namespace Brain\Games\Games\Progression;
 
 use function Brain\Games\Engine\useGameLogic;
+const  RULE_OF_GAME = 'What number is missing in the progression?';
 
 function playProgression(): void
 {
     $result = [];
     $listOfQuestions = [];
-    $rulesOfTheGame = 'What number is missing in the progression?';
     for ($i = 0; $i <= 2; $i++) {
         list($question, $result[$i]) = prepareAQuestionAndResult(calculateTheProgression());
         $listOfQuestions[$i] = $question;
     }
-    useGameLogic($rulesOfTheGame, $listOfQuestions, $result);
+    useGameLogic(RULE_OF_GAME, $listOfQuestions, $result);
 }
 
 function calculateTheProgression(): array
