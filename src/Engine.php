@@ -5,13 +5,15 @@ namespace Brain\Games\Engine;
 use function cli\line;
 use function cli\prompt;
 
+const NUMBER_OF_ROUND = 3;
+
 function useGameLogic(string $rulesOfTheGame, array $question, array $result): void
 {
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line($rulesOfTheGame);
-    for ($i = 0; $i <= 2; $i++) {
+    for ($i = 1; $i <= NUMBER_OF_ROUND; $i++) {
         line('Question: %s', $question[$i]);
         $answer = prompt('Your answer');
         if ((string) $result[$i] === $answer) {

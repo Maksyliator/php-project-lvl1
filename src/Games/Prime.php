@@ -3,6 +3,7 @@
 namespace Brain\Games\Games\Prime;
 
 use function Brain\Games\Engine\useGameLogic;
+use const Brain\Games\Engine\NUMBER_OF_ROUND;
 
 const RULE_OF_GAME = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -10,7 +11,7 @@ function playPrimeNumber(): void
 {
     $question = [];
     $result = [];
-    for ($i = 0; $i <= 2; $i++) {
+    for ($i = 1; $i <= NUMBER_OF_ROUND; $i++) {
         $question[$i] = rand(2, 100);
         isPrime($question[$i]) ? $result[$i] = 'yes' : $result[$i] = 'no';
     }

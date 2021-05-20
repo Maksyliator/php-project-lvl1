@@ -3,6 +3,7 @@
 namespace Brain\Games\Games\Gcd;
 
 use function Brain\Games\Engine\useGameLogic;
+use const Brain\Games\Engine\NUMBER_OF_ROUND;
 
 const RULE_OF_GAME = 'Find the greatest common divisor of given numbers.';
 
@@ -10,7 +11,7 @@ function playNod(): void
 {
     $question = [];
     $result = [];
-    for ($i = 0; $i <= 2; $i++) {
+    for ($i = 1; $i <= NUMBER_OF_ROUND; $i++) {
         $number1 = rand(1, 100);
         $number2 = rand(1, 100);
         $question[$i] = "{$number1} {$number2}";
