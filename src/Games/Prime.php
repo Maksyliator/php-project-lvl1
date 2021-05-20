@@ -11,17 +11,17 @@ function playPrimeNumber(): void
     $rulesOfTheGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     for ($i = 0; $i <= 2; $i++) {
         $question[$i] = rand(2, 100);
-        $result[$i] = checkIfPrimeNumber($question[$i]);
+        isPrime($question[$i]) ? $result[$i] = 'yes' : $result[$i] = 'no';
     }
     useGameLogic($rulesOfTheGame, $question, $result);
 }
 
-function checkIfPrimeNumber(int $number): string
+function isPrime(int $number): bool
 {
     for ($i = 2; $i <= sqrt($number); $i++) {
         if ($number % $i === 0) {
-            return "no";
+            return false;
         }
     }
-    return "yes";
+    return true;
 }
