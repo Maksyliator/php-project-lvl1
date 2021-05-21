@@ -29,7 +29,7 @@ function getARandomMathExpression(): array
     return array($question, $result);
 }
 
-function calculate($number1, $number2, $randomMathematicalOperator): int
+function calculate(int $number1, int $number2, string $randomMathematicalOperator): int
 {
     $result = 0;
     switch ($randomMathematicalOperator) {
