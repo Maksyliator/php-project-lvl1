@@ -20,27 +20,28 @@ function playCalculator(): void
 
 function getARandomMathExpression(): array
 {
-    $question = '';
-    $result = 0;
     $number1 = rand(1, 20);
     $number2 = rand(1, 20);
-    $sum = 1;
-    $difference = 2;
-    $multiplication = 3;
-    $determinantOfArithmeticExpression = rand(1, 3);
-    switch ($determinantOfArithmeticExpression) {
-        case $sum:
-            $question = "{$number1} + {$number2}";
+    $mathematicalOperations = ['+', '-', '*'];
+    $randomMathematicalOperator = $mathematicalOperations[array_rand($mathematicalOperations)];
+    $question = "{$number1} {$randomMathematicalOperator} {$number2}";
+    $result = calculate($number1, $number2, $randomMathematicalOperator);
+    return array($question, $result);
+}
+
+function calculate($number1, $number2, $randomMathematicalOperator): int
+{
+    $result = 0;
+    switch ($randomMathematicalOperator) {
+        case '+':
             $result = $number1 + $number2;
             break;
-        case $difference:
-            $question = "{$number1} - {$number2}";
+        case '-':
             $result = $number1 - $number2;
             break;
-        case $multiplication:
-            $question = "{$number1} * {$number2}";
+        case '*':
             $result = $number1 * $number2;
             break;
     }
-    return array ($question, $result);
+    return $result;
 }
