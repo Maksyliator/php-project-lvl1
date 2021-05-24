@@ -2,7 +2,7 @@
     "name": "hexlet/code",
     "bin": [
         "bin/brain-games",
-        "bin/brain-even",
+      "bin/brain-even.php",
         "bin/brain-calc",
         "bin/brain-gcd",
         "bin/brain-progression",
@@ -20,7 +20,7 @@
     "autoload": {
         "files" : [
             "src/Cli.php",
-            "src/Games/Paritycheck.php",
+            "src/Games/Even.php",
             "src/Games/Calculator.php",
             "src/Games/Gcd.php",
             "src/Games/Progression.php",
