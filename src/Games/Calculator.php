@@ -31,7 +31,7 @@ function getARandomMathExpression(): array
 
 function calculate(int $number1, int $number2, string $randomMathematicalOperator): int
 {
-    $result = null;
+    (int) $result = null;
     switch ($randomMathematicalOperator) {
         case '+':
             $result = $number1 + $number2;
