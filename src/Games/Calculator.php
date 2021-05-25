@@ -43,5 +43,5 @@ function calculate(int $number1, int $number2, string $randomMathematicalOperato
             $result = $number1 * $number2;
             break;
     }
-    return (int) $result;
+    return $result;
 }
