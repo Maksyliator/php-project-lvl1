@@ -13,7 +13,7 @@ function playParityCheck(): void
     $questions = [];
     $results = [];
     for ($i = 1; $i <= NUMBER_OF_ROUND; $i++) {
-        $question[$i] = rand(1, 100);
+        $questions[$i] = rand(1, 100);
         isEven($questions[$i]) ? $results[$i] = 'yes' : $results[$i] = 'no';
     }
     useGameLogic(RULE_OF_GAME, $questions, $results);
