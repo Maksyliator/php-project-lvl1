@@ -26,7 +26,7 @@ function getARandomMathExpression(): array
     $randomMathematicalOperator = $mathematicalOperations[array_rand($mathematicalOperations)];
     $question = "{$number1} {$randomMathematicalOperator} {$number2}";
     $result = calculate($number1, $number2, $randomMathematicalOperator);
-    return array($question, $result);
+    return [question, $result];
 }
 
 function calculate(int $number1, int $number2, string $randomMathematicalOperator): int
