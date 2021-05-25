@@ -15,7 +15,7 @@ function playNod(): void
     for ($i = 1; $i <= NUMBER_OF_ROUND; $i++) {
         $number1 = rand(1, 100);
         $number2 = rand(1, 100);
-        $question[$i] = "{$number1} {$number2}";
+        $question[$i] = "$number1 $number2";
         $result[$i] = nod($number1, $number2);
     }
     useGameLogic(RULE_OF_GAME, $question, $result);

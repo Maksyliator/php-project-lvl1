@@ -37,7 +37,7 @@ function prepareQuestionAndResult(array $progression): array
     $itemNumberForQuestion = rand(0, 9);
     $result = $progression[$itemNumberForQuestion];
     for ($i = 0; $i <= 9; $i++) {
-        $itemNumberForQuestion !== $i ? $question .= "{$progression[$i]} " : $question .= '.. ';
+        $itemNumberForQuestion !== $i ? $question .= "$progression[$i] " : $question .= '.. ';
     }
     return [$question, $result];
 }
