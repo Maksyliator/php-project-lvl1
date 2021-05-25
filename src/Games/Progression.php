@@ -10,13 +10,13 @@ const RULE_OF_GAME = 'What number is missing in the progression?';
 
 function playProgression(): void
 {
-    $result = [];
+    $results = [];
     $listOfQuestions = [];
     for ($i = 1; $i <= NUMBER_OF_ROUND; $i++) {
-        list($question, $result[$i]) = prepareQuestionAndResult(calculateTheProgression());
+        list($question, $results[$i]) = prepareQuestionAndResult(calculateTheProgression());
         $listOfQuestions[$i] = $question;
     }
-    useGameLogic(RULE_OF_GAME, $listOfQuestions, $result);
+    useGameLogic(RULE_OF_GAME, $listOfQuestions, $results);
 }
 
 function calculateTheProgression(): array

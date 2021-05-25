@@ -10,12 +10,12 @@ const RULE_OF_GAME = 'What is the result of the expression?';
 
 function playCalculator(): void
 {
-    $question = [];
-    $result = [];
+    $questions = [];
+    $results = [];
     for ($i = 1; $i <= NUMBER_OF_ROUND; $i++) {
-        list($question[$i], $result[$i]) = getARandomMathExpression();
+        list($questions[$i], $results[$i]) = getARandomMathExpression();
     }
-    useGameLogic(RULE_OF_GAME, $question, $result);
+    useGameLogic(RULE_OF_GAME, $questions, $results);
 }
 
 function getARandomMathExpression(): array

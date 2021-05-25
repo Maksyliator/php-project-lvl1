@@ -10,13 +10,13 @@ const RULE_OF_GAME = 'Answer "yes" if given number is prime. Otherwise answer "n
 
 function playPrimeNumber(): void
 {
-    $question = [];
-    $result = [];
+    $questions = [];
+    $results = [];
     for ($i = 1; $i <= NUMBER_OF_ROUND; $i++) {
-        $question[$i] = rand(2, 100);
-        isPrime($question[$i]) ? $result[$i] = 'yes' : $result[$i] = 'no';
+        $questions[$i] = rand(2, 100);
+        isPrime($questions[$i]) ? $results[$i] = 'yes' : $results[$i] = 'no';
     }
-    useGameLogic(RULE_OF_GAME, $question, $result);
+    useGameLogic(RULE_OF_GAME, $questions, $results);
 }
 
 function isPrime(int $number): bool

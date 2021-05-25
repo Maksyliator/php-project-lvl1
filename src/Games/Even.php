@@ -10,13 +10,13 @@ const RULE_OF_GAME = 'Answer "yes" if the number is even, otherwise answer "no".
 
 function playParityCheck(): void
 {
-    $question = [];
-    $result = [];
+    $questions = [];
+    $results = [];
     for ($i = 1; $i <= NUMBER_OF_ROUND; $i++) {
         $question[$i] = rand(1, 100);
-        isEven($question[$i]) ? $result[$i] = 'yes' : $result[$i] = 'no';
+        isEven($questions[$i]) ? $results[$i] = 'yes' : $results[$i] = 'no';
     }
-    useGameLogic(RULE_OF_GAME, $question, $result);
+    useGameLogic(RULE_OF_GAME, $questions, $results);
 }
 
 function isEven(int $number): bool
