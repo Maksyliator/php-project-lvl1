@@ -13,7 +13,7 @@ function playProgression(): void
     $result = [];
     $listOfQuestions = [];
     for ($i = 1; $i <= NUMBER_OF_ROUND; $i++) {
-        list($question, $result[$i]) = prepareAQuestionAndResult(calculateTheProgression());
+        list($question, $result[$i]) = prepareQuestionAndResult(calculateTheProgression());
         $listOfQuestions[$i] = $question;
     }
     useGameLogic(RULE_OF_GAME, $listOfQuestions, $result);
@@ -31,7 +31,7 @@ function calculateTheProgression(): array
     return $progression;
 }
 
-function prepareAQuestionAndResult(array $progression): array
+function prepareQuestionAndResult(array $progression): array
 {
     $question = '';
     $itemNumberForQuestion = rand(0, 9);
