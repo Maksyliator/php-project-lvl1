@@ -22,5 +22,5 @@ function playParityCheck(): void
 function isEven(int $number): bool
 {
     $parityCheck = $number % 2;
-    return $parityCheck === 0 ?: false;
+    return $parityCheck === 0 ? true : false;
 }
