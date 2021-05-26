@@ -10,15 +10,15 @@ const RULE_OF_GAME = 'Find the greatest common divisor of given numbers.';
 
 function playNod(): void
 {
-    $questions = [];
-    $results = [];
+    $questionsAndResults = [];
     for ($i = 1; $i <= NUMBER_OF_ROUND; $i++) {
         $number1 = rand(1, 100);
         $number2 = rand(1, 100);
-        $questions[$i] = "$number1 $number2";
-        $results[$i] = nod($number1, $number2);
+        $question = "$number1 $number2";
+        $result = nod($number1, $number2);
+        $questionsAndResults[$question] = $result;
     }
-    useGameLogic(RULE_OF_GAME, $questions, $results);
+    useGameLogic(RULE_OF_GAME, $questionsAndResults);
 }
 
 function nod(int $number1, int $number2): int

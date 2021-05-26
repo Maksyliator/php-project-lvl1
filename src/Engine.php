@@ -7,19 +7,19 @@ use function cli\prompt;
 
 const NUMBER_OF_ROUND = 3;
 
-function useGameLogic(string $rulesOfTheGame, array $question, array $result): void
+function useGameLogic(string $rulesOfTheGame, array $questionsAndResults): void
 {
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line($rulesOfTheGame);
-    for ($i = 1; $i <= NUMBER_OF_ROUND; $i++) {
-        line('Question: %s', $question[$i]);
+    foreach ($questionsAndResults as $question => $result) {
+        line('Question: %s', $question);
         $answer = prompt('Your answer');
-        if ((string) $result[$i] === $answer) {
+        if ((string) $result === $answer) {
             line('Correct!');
         } else {
-            line("'{$answer}' is wrong answer ;(. Correct answer was '{$result[$i]}'.
+            line("'$answer' is wrong answer ;(. Correct answer was '$result'.
 Let's try again, %s!", $name);
             return;
         }
