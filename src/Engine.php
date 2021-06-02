@@ -19,8 +19,8 @@ function useGameLogic(string $rulesOfTheGame, array $questionsAndResults): void
         if ((string) $result === $answer) {
             line('Correct!');
         } else {
-            line("'$answer' is wrong answer ;(. Correct answer was '$result'.
-Let's try again, %s!", $name);
+            line("'$answer' is wrong answer ;(. Correct answer was '$result'.");
+            line("Let's try again, %s!", $name);
             return;
         }
     }
