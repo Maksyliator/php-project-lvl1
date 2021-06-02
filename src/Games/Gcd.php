@@ -8,27 +8,27 @@ use const Brain\Games\Engine\NUMBER_OF_ROUND;
 
 const RULE_OF_GAME = 'Find the greatest common divisor of given numbers.';
 
-function playNod(): void
+function playGCD(): void
 {
     $questionsAndResults = [];
     for ($i = 1; $i <= NUMBER_OF_ROUND; $i++) {
         $number1 = rand(1, 100);
         $number2 = rand(1, 100);
         $question = "$number1 $number2";
-        $result = nod($number1, $number2);
+        $result = isGreatestCommonDivisor($number1, $number2);
         $questionsAndResults[$question] = $result;
     }
     useGameLogic(RULE_OF_GAME, $questionsAndResults);
 }
 
-function nod(int $number1, int $number2): int
+function isGreatestCommonDivisor(int $number1, int $number2): int
 {
-    $nod = 0;
+    $gcd = 0;
     for ($i = $number1; $i > 0; $i--) {
         if ($number1 % $i == 0 && $number2 % $i == 0) {
-            $nod = $i;
+            $gcd = $i;
             break;
         }
     }
-    return $nod;
+    return $gcd;
 }
