@@ -2,7 +2,7 @@
 
 namespace Brain\Games\Games\Gcd;
 
-use function Brain\Games\Engine\useGameLogic;
+use function Brain\Games\Engine\playGame;
 
 use const Brain\Games\Engine\NUMBER_OF_ROUND;
 
@@ -18,7 +18,7 @@ function playGCD(): void
         $result = isGreatestCommonDivisor($number1, $number2);
         $questionsAndResults[$question] = $result;
     }
-    useGameLogic(RULE_OF_GAME, $questionsAndResults);
+    playGame(RULE_OF_GAME, $questionsAndResults);
 }
 
 function isGreatestCommonDivisor(int $number1, int $number2): int

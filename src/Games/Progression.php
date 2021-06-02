@@ -2,7 +2,7 @@
 
 namespace Brain\Games\Games\Progression;
 
-use function Brain\Games\Engine\useGameLogic;
+use function Brain\Games\Engine\playGame;
 
 use const Brain\Games\Engine\NUMBER_OF_ROUND;
 
@@ -15,7 +15,7 @@ function playProgression(): void
         list($question, $result) = prepareQuestionAndResult(calculateTheProgression());
         $questionsAndResults[$question] = $result;
     }
-    useGameLogic(RULE_OF_GAME, $questionsAndResults);
+    playGame(RULE_OF_GAME, $questionsAndResults);
 }
 
 function calculateTheProgression(): array

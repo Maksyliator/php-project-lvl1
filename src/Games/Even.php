@@ -2,7 +2,7 @@
 
 namespace Brain\Games\Games\Even;
 
-use function Brain\Games\Engine\useGameLogic;
+use function Brain\Games\Engine\playGame;
 
 use const Brain\Games\Engine\NUMBER_OF_ROUND;
 
@@ -16,7 +16,7 @@ function playParityCheck(): void
         isEven($question) ? $result = 'yes' : $result = 'no';
         $questionsAndResults[$question] = $result;
     }
-    useGameLogic(RULE_OF_GAME, $questionsAndResults);
+    playGame(RULE_OF_GAME, $questionsAndResults);
 }
 
 function isEven(int $number): bool

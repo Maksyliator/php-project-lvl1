@@ -2,7 +2,7 @@
 
 namespace Brain\Games\Games\Prime;
 
-use function Brain\Games\Engine\useGameLogic;
+use function Brain\Games\Engine\playGame;
 
 use const Brain\Games\Engine\NUMBER_OF_ROUND;
 
@@ -16,7 +16,7 @@ function playPrimeNumber(): void
         isPrime($question) ? $result = 'yes' : $result = 'no';
         $questionsAndResults[$question] = $result;
     }
-    useGameLogic(RULE_OF_GAME, $questionsAndResults);
+    playGame(RULE_OF_GAME, $questionsAndResults);
 }
 
 function isPrime(int $number): bool
