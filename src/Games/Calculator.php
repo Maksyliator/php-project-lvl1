@@ -29,10 +29,10 @@ function getARandomMathExpression(): array
     return [$question, $result];
 }
 
-function calculate(int $number1, int $number2, string $randomMathematicalOperator): ?int
+function calculate(int $number1, int $number2, string $mathematicalOperator): ?int
 {
     $result = null;
-    switch ($randomMathematicalOperator) {
+    switch ($mathematicalOperator) {
         case '+':
             $result = $number1 + $number2;
             break;
