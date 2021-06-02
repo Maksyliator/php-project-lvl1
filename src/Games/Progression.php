@@ -12,30 +12,31 @@ function playProgression(): void
 {
     $questionsAndResults = [];
     for ($i = 1; $i <= NUMBER_OF_ROUND; $i++) {
-        list($question, $result) = prepareQuestionAndResult(calculateTheProgression());
+        $lengthProgression = rand(5, 10);
+        $firstNumberOfProgression = rand(1, 100);
+        $progressionStep = rand(1, 10);
+        $itemNumberForQuestion = rand(0, ($lengthProgression - 1));
+        $progression = calculateTheProgression($lengthProgression, $firstNumberOfProgression, $progressionStep);
+        list($question, $result) = prepareQuestionAndResult($progression, $itemNumberForQuestion);
         $questionsAndResults[$question] = $result;
     }
     playGame(RULE_OF_GAME, $questionsAndResults);
 }
 
-function calculateTheProgression(): array
+function calculateTheProgression(int $lengthProgression, int $firstNumberOfProgression, int $progressionStep): array
 {
     $progression = [];
-    $progressionStep = rand(1, 10);
-    $firstNumberOfProgression = rand(1, 100);
-    $progression[0] = $firstNumberOfProgression;
-    for ($i = 1; $i <= 9; $i++) {
-        $progression[$i] = $progression[$i - 1] + $progressionStep;
+    for ($i = 0; $i < $lengthProgression; $i++) {
+        $progression[$i] = $firstNumberOfProgression + (($i + 1) - 1) * $progressionStep;
     }
     return $progression;
 }
 
-function prepareQuestionAndResult(array $progression): array
+function prepareQuestionAndResult(array $progression, int $itemNumberForQuestion): array
 {
     $question = '';
-    $itemNumberForQuestion = rand(0, 9);
     $result = $progression[$itemNumberForQuestion];
-    for ($i = 0; $i <= 9; $i++) {
+    for ($i = 0; $i < count($progression); $i++) {
         $itemNumberForQuestion !== $i ? $question .= "$progression[$i] " : $question .= '.. ';
     }
     return [$question, $result];
