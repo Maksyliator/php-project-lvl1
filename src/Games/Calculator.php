@@ -13,7 +13,7 @@ function playCalculator(): void
     $questionsAndResults = [];
     for ($i = 1; $i <= NUMBER_OF_ROUND; $i++) {
         list($question, $result) = getARandomMathExpression();
-        $questionsAndResults[$question] = $result;
+        $questionsAndResults[$question] = (string) $result;
     }
     playGame(RULE_OF_GAME, $questionsAndResults);
 }

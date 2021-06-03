@@ -18,7 +18,7 @@ function playProgression(): void
         $itemNumberForQuestion = rand(0, ($lengthProgression - 1));
         $progression = calculateTheProgression($lengthProgression, $firstNumberOfProgression, $progressionStep);
         list($question, $result) = prepareQuestionAndResult($progression, $itemNumberForQuestion);
-        $questionsAndResults[$question] = $result;
+        $questionsAndResults[$question] = (string) $result;
     }
     playGame(RULE_OF_GAME, $questionsAndResults);
 }

@@ -16,7 +16,7 @@ function playGame(string $rulesOfTheGame, array $questionsAndResults): void
     foreach ($questionsAndResults as $question => $result) {
         line('Question: %s', $question);
         $answer = prompt('Your answer');
-        if ((string) $result === $answer) {
+        if ($result === $answer) {
             line('Correct!');
         } else {
             line("'$answer' is wrong answer ;(. Correct answer was '$result'.");

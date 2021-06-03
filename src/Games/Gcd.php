@@ -16,7 +16,7 @@ function playGCD(): void
         $number2 = rand(1, 100);
         $question = "$number1 $number2";
         $result = isGreatestCommonDivisor($number1, $number2);
-        $questionsAndResults[$question] = $result;
+        $questionsAndResults[$question] = (string) $result;
     }
     playGame(RULE_OF_GAME, $questionsAndResults);
 }
