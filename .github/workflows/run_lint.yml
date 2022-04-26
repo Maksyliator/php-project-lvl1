@@ -1,4 +1,4 @@
-name: RUN LINT
+name: Mind games CI
 
 on:
   push:
